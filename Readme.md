@@ -2,7 +2,7 @@
 
 * Студент: [Никита Владимиров](https://up.htmlacademy.ru/htmlcss/24/user/841063).
 * Наставник: [Анатолий
-Пазюк](https://htmlacademy.ru/profile/id380487).
+Пазюк](https://htmlacademy.ru/profile/id380487 ).
 
 ---
 
