@@ -70,19 +70,25 @@
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
         <a href="">Поиск гостиницы в Седоне</a>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <label>Дата заезда
-            <input type="text" name="arrival-date" placeholder="24 апреля 2017">
-          </label>
-          <label>Дата выезда
-            <input type="text" name="departure-date" placeholder="4 июля 2017">
-          </label>
-          <label>Взрослые
-            <input type="text" name="adult-count" placeholder="2">
-          </label>
-          <label>Дети
-            <input type="text" name="children-count" placeholder="0">
-          </label>
-          <button class="button" type="submit">Найти</button>
+          <p class="form-item">
+            <label for="input-arrival-date">Дата заезда</label>
+            <input type="text" id="input-arrival-date" name="arrival-date" placeholder="24 апреля 2017">
+          </p>
+            <label for="input-departure-date">Дата выезда</label>
+            <input type="text" id="input-departure-date" name="departure-date" placeholder="4 июля 2017">
+          <p class="form-item">
+            <label for="input-adult-count">Взрослые</label>
+            <button class="button button-mines" type="button" aria-label="Уменьшить значение">-</button>
+            <input type="text" id="input-adult-count" name="adult-count" value="2">
+            <button class="button button-plus" type="button" aria-label="Увеличить значение">+</button>
+          </p>
+          <p class="form-item">
+            <label for="input-children-count">Дети</label>
+            <button class="button button-mines" type="button" aria-label="Уменьшить значение">-</button>
+            <input type="text" id="input-children-count" name="children-count" value="0">
+            <button class="button button-plus" type="button" aria-label="Увеличить значение">+</button>
+          </p>
+          <button class="hotel-search-button" type="submit">Найти</button>
         </form>
         <img src="img/map.jpg" width="1200" height="594" alt="Карта">
       </section>
