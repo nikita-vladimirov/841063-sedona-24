@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-minimized.css">
   </head>
   <body class="index">
     <div class="shadow">
       <header class="main-header">
         <nav class="main-menu">
           <ul>
-            <li><a href="" class="main-menu-active">Информация</a></li>
+            <li class="main-menu-active">Информация</li>
             <li><a href="">Фото и видео</a></li>
             <li><a href="">Карта штата</a></li>
             <li><a href="inner.html">Гостиницы</a></li>
@@ -70,9 +70,9 @@
         <section class="hotel-search">
           <b>Заинтересовались?</b>
           <p class="hotel-paragraph">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
-          <a href="">Поиск гостиницы в Седоне</a>
-          <div class="hotel-search-wrapper">
-            <form action="https://echo.htmlacademy.ru" method="post">
+          <a href="hotel-search.html" class="open-modal-button">Поиск гостиницы в Седоне</a>
+          <div>
+            <form class="hotel-search-inner form-invisible" action="https://echo.htmlacademy.ru" method="post">
               <div class="form-item">
                 <label for="input-arrival-date">Дата заезда:</label>
                 <input type="text" id="input-arrival-date" name="arrival-date" value="24 апреля 2017">
@@ -83,53 +83,49 @@
                 <input type="text" id="input-departure-date" name="departure-date" value="4 июля 2017">
                 <button class="calendar-icon" type="button"></button>
               </div>
-              <div class="inline-item">
-                <div class="form-item">
-                  <div class="form-item-wrapper">
-                    <label for="input-adult-count">Взрослые:</label>
-                    <div class="form-item-wrapper-inner">
-                      <button class="button button-mines" type="button" aria-label="Уменьшить значение">
-                        <span>
-                          <svg width="11" height="11">
-                            <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
-                          </svg>
-                        </span>
-                      </button>
-                      <input class="form-people" type="text" id="input-adult-count" name="adult-count" value="2">
-                      <button class="button button-plus" type="button" aria-label="Увеличить значение">
-                        <span>
-                          <svg width="11" height="11">
-                            <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
+              <div class="inline-item form-item">
+                <div class="form-item-wrapper">
+                  <label for="input-adult-count">Взрослые:</label>
+                  <div class="form-item-wrapper-inner">
+                    <button class="button button-mines" type="button" aria-label="Уменьшить значение">
+                      <span>
+                        <svg width="11" height="11">
+                          <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
+                        </svg>
+                      </span>
+                    </button>
+                    <input class="form-people" type="text" id="input-adult-count" name="adult-count" value="2">
+                    <button class="button button-plus" type="button" aria-label="Увеличить значение">
+                      <span>
+                        <svg width="11" height="11">
+                          <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
                             <line x1="50%" y1="0" x2="50%" y2="11" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
+                        </svg>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div class="inline-item">
-                <div class="form-item"> 
-                  <div class="form-item-wrapper form-item-right">
-                    <label for="input-children-count">Дети:</label>
-                    <div class="form-item-wrapper-inner form-item-wrapper-right">
-                      <button class="button button-mines" type="button" aria-label="Уменьшить значение">
-                        <span>
-                          <svg width="11" height="11">
-                            <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
-                          </svg>
-                        </span>
-                      </button>
-                      <input class="form-people" type="text" id="input-children-count" name="children-count" value="0">
-                      <button class="button button-plus" type="button" aria-label="Увеличить значение">
-                        <span>
-                          <svg width="11" height="11">
-                            <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
-                            <line x1="50%" y1="0" x2="50%" y2="11" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
-                          </svg>
-                        </span>
-                      </button>
-                    </div>
+              <div class="inline-item form-item">
+                <div class="form-item-wrapper form-item-right">
+                  <label for="input-children-count">Дети:</label>
+                  <div class="form-item-wrapper-inner form-item-wrapper-right">
+                    <button class="button button-mines" type="button" aria-label="Уменьшить значение">
+                      <span>
+                        <svg width="11" height="11">
+                          <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
+                        </svg>
+                      </span>
+                    </button>
+                    <input class="form-people" type="text" id="input-children-count" name="children-count" value="0">
+                    <button class="button button-plus" type="button" aria-label="Увеличить значение">
+                      <span>
+                        <svg width="11" height="11">
+                          <line x1="0" y1="50%" x2="11" y2="50%" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
+                          <line x1="50%" y1="0" x2="50%" y2="11" stroke="rgb(169, 169, 169)" stroke-width="3"></line>
+                        </svg>
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -137,6 +133,7 @@
             </form>
           </div>
         </section>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22230.157052778915!2d-111.79978993418841!3d34.85811347373623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1551533031989" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe> -->
         <img class="img-map" src="img/map.jpg" width="1200" height="593" alt="Карта">
       </main>
       <footer class="main-footer">
@@ -172,5 +169,7 @@
         </p>
       </footer>
     </div>
+    <script src="js/open-modal-minimized.js"></script>
+    <script src="js/form-button-minimized.js"></script>
   </body>
 </html>
