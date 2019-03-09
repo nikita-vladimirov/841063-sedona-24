@@ -850,6 +850,7 @@ a .developer-icon {
   height: 23px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .option-column-input:disabled + label::before {
