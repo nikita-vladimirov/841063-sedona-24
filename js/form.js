@@ -1,3 +1,14 @@
+// Открывает форму поиска
+var buttonsearch = document.querySelector(".open-modal-button");
+
+var hotelsearch = document.querySelector(".hotel-search-inner");
+
+buttonsearch.addEventListener ("click", function (evt) {
+    evt.preventDefault ();
+    hotelsearch.classList.toggle ("form-invisible");
+});
+
+// Кнопки выбора количества человек в форме поиска отеля
 var buttonplus = document.querySelectorAll(".button-plus");
 var buttonmines = document.querySelectorAll(".button-mines");
 var people = document.querySelectorAll (".form-people");
@@ -36,3 +47,4 @@ buttonmines[1].addEventListener ("click", function (evt) {
         people[1].value = peoplescndvalue;
     };
 });
+

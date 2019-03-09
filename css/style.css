@@ -121,7 +121,7 @@ a {
 }
 
 /* Стиль добавлен для понимания положения курсора при переходе по странице табом */
-.main-menu img:focus {
+a:focus > img {
   width: 160px;
   margin: 0 -80px;
   outline: none;

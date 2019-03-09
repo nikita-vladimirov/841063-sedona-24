@@ -13,7 +13,7 @@ a{text-decoration:none;outline:none;color:#000}
 .main-menu a:hover,.main-menu a:focus{color:#81b3d2}
 .main-menu a:active{color:rgba(0,0,0,0.3)}
 .main-menu img{position:absolute;top:0;left:50%;margin:0 -70px}
-.main-menu img:focus{width:160px;margin:0 -80px;outline:none}
+a:focus > img{width:160px;margin:0 -80px;outline:none}
 .main-part h1,.advantages h3,.main-footer span,.hotel-search-button,.hotel-search a{font-size:21px;font-weight:700;text-transform:uppercase}
 .main-part h1{display:inline-block;vertical-align:top;width:445px;padding:0;line-height:26px;margin:0 0 29px}
 .advantages h2{display:inline-block;vertical-align:top;margin:0;padding:0;margin-bottom:53px}
