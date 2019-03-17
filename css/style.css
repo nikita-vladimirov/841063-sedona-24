@@ -2,6 +2,8 @@ body {
   margin: 0;
   padding: 0;
 
+  background-color: rgb(242, 242, 242);
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -13,48 +15,53 @@ body {
   width: 1200px;
   margin: 0 auto;
 
+  background-color: rgb(255, 255, 255);
   -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
-}
-
-/* СТИЛИЗАЦИЯ ГЛАВНОЙ СТРАНИЦЫ */
-
-.index {
-  position: relative;
-
-  background-color: rgb(242, 242, 242);
-  background-image: url("../img/background.jpg");
-  background-position: center -3px;
-  background-repeat: no-repeat;
-}
-
-.index::before {
-  position: absolute;
-  top: 132px;
-  left: 50%;
-
-  width: 458px;
-  height: 352px;
-  margin: 0 -229px;
-
-  /* background-color: rgb(255, 255, 255); */
-  background-image: url("../img/welcome.svg");
-  background-size: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  content: "";
 }
 
 /* СТИЛИЗАЦИЯ НАВИГАЦИИ */
 
 .main-header {
   width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 570px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-bottom: 63px;
+  margin-right: auto; 
   padding: 0;
 
   background-color: rgb(255, 255, 255);
+}
+
+.background {
+  position: relative;
+  top: 0;
+
+  width: 1200px;
+  height: 506px;
+  margin: 0;
+
+  background-color: rgb(222, 222, 222);
+  background-image: url("../img/background.jpg");
+  background-position: center -3px;
+  background-repeat: no-repeat;
+}
+
+.background::before {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+
+  width: 458px;
+  height: 352px;
+  margin: 0 -229px;
+
+  background-image: url("../img/welcome.svg");
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  content: "";
 }
 
 .main-part {
@@ -81,7 +88,8 @@ body {
   width: 20%;
   margin: 0;
   padding: 15px 0 ;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   text-align: center;
 
@@ -132,6 +140,7 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 1;
 
   margin: 0 -70px;
 }
@@ -175,7 +184,9 @@ span.developer {
   font-weight: 400;
 }
 
-.advantages-list {
+.advantages-list,
+.advantages-list-top,
+.advantages-list-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,42 +200,42 @@ span.developer {
   padding: 0;
 }
 
-.advantage-item h3 {
+.advantages h3 {
   margin: 0;
   margin-bottom: 23px;
   padding: 0 70px;
 }
 
-.advantage-item span {
+.advantages span {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 21px;
 }
 
-.advantage-item p {
+.advantages p {
   display: inline-block;
   vertical-align: top;
   margin: 0;
   padding: 0;
 }
 
-.advantage-item:first-child,
-.advantage-item:nth-child(5) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1200px;
+.advantage-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1200px;
 
-  background-color: rgb(129, 179, 210);
+    background-color: rgb(129, 179, 210);
 
-  color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .advantage-item-wrap {
   width: 400px;
   padding-top: 48px;
   padding-bottom: 59px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .advantage-item-wrap-top {
@@ -233,15 +244,17 @@ span.developer {
 }
 
 .advantage-item-wrap-bottom {
+  padding-top: 47px;
   padding-left: 40px;
+  padding-bottom: 60px;
   padding-right: 40px;
 }
 
 .advantage-item-wrap h3 {
-  padding: 0 85px; 
+  padding: 0 65px; 
 }
 
-.advantage-item:first-child::after {
+.advantage-item-top::after {
   width: 800px;
 
   background-color: rgb(255, 255, 255);
@@ -253,7 +266,10 @@ span.developer {
   content: "";
 }
 
-.advantage-item:nth-child(5)::before {
+.advantage-item-bottom {
+  margin-top: 2px;
+}
+.advantage-item-bottom::before {
   width: 800px;
 
   background-color: rgb(255, 255, 255);
@@ -271,34 +287,39 @@ span.developer {
   padding-left: 55px;
   padding-bottom: 80px;
   padding-right: 55px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   background-color: rgb(255, 255, 255);
   background-position: center 60px;
   background-repeat: no-repeat;
 }
 
-.advantage-item:nth-child(2) {
+.advantages-list-top li:first-child {
   background-image: url("../img/house-icon.svg");
 }
 
-.advantage-item:nth-child(3) {
+.advantages-list-top li:nth-child(2) {
   background-image: url("../img/food-icon.svg");
 }
 
-.advantage-item:nth-child(4) {
+.advantages-list-top li:nth-child(3) {
   background-image: url("../img/gift-icon.svg");
   background-position: center 56px;
 }
 
-.advantage-item:nth-child(n+6) {
-  width: 33.33%;
-  padding-top: 49px;
-  padding-left: 65px;
-  padding-bottom: 60px;
-  padding-right: 70px;
-  box-sizing: border-box;
+.advantages-list-bottom {
   background-color: rgb(238, 238, 238);
+}
+
+.advantages-list-bottom li {
+  width: 33.33%;
+  padding-top: 48px;
+  padding-left: 65px;
+  padding-bottom: 59px;
+  padding-right: 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main-part {
@@ -306,14 +327,15 @@ span.developer {
 }
 
 .main-menu ul,
-.advantages-list {
+.advantages-list-top,
+.advantages-list-bottom {
   list-style: none;
 }
 
 /* ФОРМА ПОИСКА ОТЕЛЯ */
 .hotel-search {
   margin: 0 auto;
-  padding-top: 53px;
+  padding-top: 54px;
 }
 
 .hotel-search b,
@@ -337,7 +359,8 @@ span.developer {
   display: block;
   margin-bottom: 46px;
   padding: 0 370px;
-  box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
 
   line-height: 24px;
 }
@@ -558,8 +581,8 @@ div .inline-item {
 .form-item-wrapper input {
   height: 16px;
   padding-top: 13px;
-  padding-bottom: 9px;
   padding-left: 0;
+  padding-bottom: 9px;
   padding-right: 0;
 
   font-size: 14px;
@@ -665,7 +688,8 @@ div .inline-item {
   padding-left: 133px;
   padding-bottom: 35px;
   padding-right: 101px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
   background-color: rgba(253, 253, 253, 0.9);
 }
@@ -694,6 +718,9 @@ div .inline-item {
   -webkit-box-pack: justify;
      -ms-flex-pack: justify;
    justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 350px;
   margin: 0;
   margin-top: 1px;
   margin-left: 23px;
@@ -812,7 +839,6 @@ a .developer-icon {
   padding-bottom: 6px;
   padding-right: 72px;
 
-
   color: rgb(255, 255, 255);
   font-size: 14px;
   line-height: 21px;
@@ -820,10 +846,15 @@ a .developer-icon {
 }
 
 .search-option span {
+  max-width: 250px;
   margin-bottom: 24px;
 
   font-size: 16px;
   font-weight: 700;
+}
+
+.search-option label {
+  max-width: 250px;
 }
 
 .option-column-left {
@@ -906,6 +937,7 @@ a .developer-icon {
      -ms-flex-direction: column;
          flex-direction: column;
   width: 320px;
+  margin-right: -2px;
 
   color: #ffffff;
   text-transform: uppercase;
@@ -958,10 +990,14 @@ a .developer-icon {
   cursor: pointer;
 }
 
-.price-controls .min-price,
-.price-controls .max-price {
+.price-controls .min-price {
   width: 90px;
   padding-left: 65px;
+}
+
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 55px;
 }
 
 .price-controls input {
@@ -973,6 +1009,7 @@ a .developer-icon {
 
   color: inherit;
   font: inherit;
+  line-height: 29px;
 }
 
 .range-controls {
@@ -1021,13 +1058,16 @@ a .developer-icon {
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding-top: 7px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  padding-right: 30px;
 
   background-color: transparent;
   border: 2px solid #ffffff;
@@ -1088,11 +1128,17 @@ a .developer-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
-  align-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.sort-wrapper {
+  max-width: 600px;
 }
 
 .sort-wrapper li {
@@ -1140,6 +1186,8 @@ a .developer-icon {
 .sort-price {
   position: absolute;
   right: 67px;
+
+  max-width: 200px;
 }
 
 .sort-price li {
@@ -1170,8 +1218,8 @@ a .developer-icon {
   height: 1px;
   margin: -1px;
   padding: 0;
-  white-space: nowrap;
 
+  white-space: nowrap;
   border: 0;
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
@@ -1209,6 +1257,7 @@ a .developer-icon {
 }
 
 .hotel-item-block h2 {
+  max-width: 600px;
   margin: 0;
   padding: 0;
 }
@@ -1266,8 +1315,12 @@ a .developer-icon {
 }
 
 .hotel-item-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   max-width: 260px;
   margin-top: -4px;
 }
@@ -1356,6 +1409,7 @@ a .developer-icon {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  max-width: 230px;
 }
 
 .stars li {

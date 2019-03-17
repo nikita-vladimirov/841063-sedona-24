@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <!-- <link rel="stylesheet" href="css/style-minimized.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-minimized.css">
   </head>
   <body class="index">
     <div class="shadow">
       <header class="main-header">
         <nav class="main-menu">
           <ul>
-            <li><a class="main-menu-active">Информация</a></li>
+            <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
             <li><a href="inner.html">Гостиницы</a></li>
@@ -22,54 +21,63 @@
             <img src="img/logo.svg" alt="Логотип сайта" width="140" height="72">
           </a>
         </nav>
+        <div class="background">
+        </div>
       </header>
       <main class="main-part">
+        <!-- <img src="img/background.jpg" width="1200" height="782"> -->
         <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <section class="advantages">
           <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
-          <ul class="advantages-list">
-            <li class="advantage-item">
+          <div class="advantages-list">
+            <div class="advantage-item advantage-item-top">
               <div class="advantage-item-wrap advantage-item-wrap-top">
-              <h3>Настоящий городок</h3>
-              <span>— №1 —</span>
-              <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            </div>
-            </li>
-            <li class="advantage-item advantage-item-feature">
-              <h3>Жильё</h3>
-              <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-              </li>
-            <li class="advantage-item advantage-item-feature">
-              <h3>Еда</h3>
-              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </li>
-            <li class="advantage-item advantage-item-feature">
-              <h3>Сувениры</h3>
-              <p>Не только китайского, но и местного производства!</p>
-            </li>
-            <li class="advantage-item">
-              <div class="advantage-item-wrap advantage-item-wrap-bottom">
-                <h3>Там есть Мост дьявола</h3>
-                <span>— №2 —</span>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                <h3>Настоящий городок</h3>
+                <span>— №1 —</span>
+                <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-            </li>
-            <li class="advantage-item">
-              <h3>Небольшая площадь</h3>
-              <span>— №3 —</span>
-              <p>Все достопримечательности находятся очень близко</p>
-            </li>
-            <li class="advantage-item">
-              <h3>Красивая дорога</h3>
-              <span>— №4 —</span>
-              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            </li>
-            <li class="advantage-item">
-              <h3>Мало туристов</h3>
-              <span>— №5 —</span>
-              <p>Большинство едет в Гранд Каньон и толпится там</p>
-            </li>
-          </ul>
+            </div>
+          </div>
+            <ul class="advantages-list-top">
+              <li class="advantage-item-feature">
+                <h3>Жильё</h3>
+                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              </li>
+              <li class="advantage-item-feature">
+                <h3>Еда</h3>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li class="advantage-item-feature">
+                <h3>Сувениры</h3>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+            <div class="advantages-list">
+              <div class="advantage-item advantage-item-bottom">
+                <div class="advantage-item-wrap advantage-item-wrap-bottom">
+                  <h3>Там есть Мост дьявола</h3>
+                  <span>— №2 —</span>
+                  <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div>
+              </div>
+            </div>
+            <ul class="advantages-list-bottom">
+              <li>
+                <h3>Небольшая площадь</h3>
+                <span>— №3 —</span>
+                <p>Все достопримечательности находятся очень близко</p>
+              </li>
+              <li>
+                <h3>Красивая дорога</h3>
+                <span>— №4 —</span>
+                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </li>
+              <li>
+                <h3>Мало туристов</h3>
+                <span>— №5 —</span>
+                <p>Большинство едет в Гранд Каньон и толпится там</p>
+              </li>
+            </ul>
         </section>
         <section class="hotel-search">
           <b>Заинтересовались?</b>
